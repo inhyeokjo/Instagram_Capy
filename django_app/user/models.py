@@ -20,7 +20,7 @@ class User(AbstractBaseUser):
     objects = CreateManager()
 
     username = models.CharField(max_length=200, unique=True)
-    # profile_image = models.ImageField()
+    profile_image = models.ImageField(upload_to='', )
     name = models.CharField(max_length=200)
     description = models.TextField()
     liked_posts = models.ManyToManyField('post.Post', related_name='liked_users')

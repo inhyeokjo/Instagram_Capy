@@ -3,7 +3,7 @@ from django.db import models
 
 class Post(models.Model):
     user = models.ForeignKey('user.User', on_delete=models.CASCADE)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='')
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 

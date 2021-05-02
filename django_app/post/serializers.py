@@ -8,7 +8,8 @@ class PostListSerializer(serializers.ModelSerializer):
         fields = ['user',
                   'id',
                   'body',
-                  'created_at']
+                  'created_at',
+                  'image']
         extra_kwargs = {
             'body': {'write_only': True}
         }
@@ -20,7 +21,8 @@ class PostDetailSerializer(serializers.ModelSerializer):
         fields = ['id',
                   'user',
                   'body',
-                  'created_at']
+                  'created_at',
+                  'image']
         read_only_fields = ['user']
 
 

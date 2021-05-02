@@ -135,3 +135,9 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = 'user.User'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
